@@ -1,2 +1,2 @@
-# plotly-demo
-Plotly Demo
+# Plotly Demo
+Link: https://oleg-kufirin.github.io/plotly-demo
