@@ -1,0 +1,26 @@
+---
+title: "Plotly Demo"
+author: "Oleg Kufirin"
+date: "08/03/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Kaplan-Meier Curve for the NCCTG Lung Cancer Data
+
+```{r cars, echo=FALSE, message=FALSE, warning=FALSE}
+library(survival)
+library(survminer)
+library(plotly)
+
+sf_lung <- survfit(Surv(time, status) ~ sex, data = lung)
+p1 <- ggsurvplot(sf_lung)
+ggplotly(p1[[1]])  
+
+```
+
+## Thanks!
+
